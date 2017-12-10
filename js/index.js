@@ -178,7 +178,7 @@ var Fm = {
 
   loadMusic(){
     var _this = this
-    $.getJSON('//api.jirengu.com/fm/getSong.php',{channel:this.channelId ? this.channelId : 'public_tuijian_autumn'}).done(function(ret){
+    $.getJSON('//api.jirengu.com/fm/getSong.php',{channel:this.channelId}).done(function(ret){
       _this.song = ret['song'][0]
       _this.setMusic()
       _this.loadLyric()
